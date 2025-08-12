@@ -24,3 +24,8 @@ end, { desc = 'Harpoon to file 3' })
 vim.keymap.set('n', '<leader>h4', function()
   harpoon:list():select(4)
 end, { desc = 'Harpoon to file 4' })
+
+-- Visual mode: move block
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected lines up' })
+vim.keymap.set('x', '<leader>p', [["_dP"]], { desc = 'Paste and leave on buffer' })
