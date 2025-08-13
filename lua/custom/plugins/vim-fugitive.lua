@@ -24,5 +24,7 @@ return {
         end, pull_opts)
       end,
     })
+    vim.keymap.set('n', 'gu', '<cmd>diffget //2<CR>', { desc = 'Get diff from OURS' })
+    vim.keymap.set('n', 'gh', '<cmd>diffget //3<CR>', { desc = 'Get diff from THEIRS' })
   end,
 }
