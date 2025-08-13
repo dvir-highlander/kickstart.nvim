@@ -14,7 +14,6 @@ return {
           return
         end
         local bufnr = vim.api.nvim_get_current_buf()
-        local opts = { buffer = bufnr, remap = false, silent = true }
         local push_opts = { buffer = bufnr, remap = false, silent = true, desc = '[P]ush to remote' }
         local pull_opts = { buffer = bufnr, remap = false, silent = true, desc = '[P]ull with rebase' }
         vim.keymap.set('n', '<leader>p', function()
